@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
 </head>
 <body>
-    {% block sidebar-right%}{% endblock %}
-    {% block content%}{% endblock%}
-    {% block sidebar-left %}{% endblock%}
-    {% block footer%}{% endblock %}
+    <div class="container">
+        {% load staticfiles %}
+        <img src="{% static 'img/fma-logo50x50.gif'%}" alt="FMA">
+        {% block sidebar-right%}{% endblock %}
+        {% block content%}{% endblock%}
+        {% block sidebar-left %}{% endblock%}
+        {% block footer%}{% endblock %}
+    </div>
 </body>
 </html>
