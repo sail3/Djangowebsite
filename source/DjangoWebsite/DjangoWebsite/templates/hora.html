@@ -2,4 +2,11 @@
 {% block title%} La hora en el servidor {% endblock %}
 {% block content%}
 La hora del servidor es: {{horaServidor}}
+{% if item_list %}
+<ul>
+  {% for item in item_list%}
+  <li>{{item}}</li>
+  {% endfor %}
+</ul>
+{% endif %}
 {% endblock%}
